@@ -1,0 +1,25 @@
+# Fichiers sensibles
+.env
+*.session
+*.session-journal
+
+# Cache & build Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# Logs
+*.log
+
+# Config locales IDE
+.vscode/
+.idea/

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# Telegram sessions & sensitive files
+*.session
+*.session-journal
+.env
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# VSCode / IDE
+.vscode/
+.idea/
