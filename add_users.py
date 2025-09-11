@@ -5,6 +5,7 @@ from telethon.tl.functions.channels import InviteToChannelRequest
 import time
 from dotenv import load_dotenv
 import os
+import csv
 
 # Charger les variables du fichier .env
 load_dotenv()
@@ -12,12 +13,13 @@ load_dotenv()
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 PHONE_NUMBER = os.getenv("PHONE_NUMBER")
+CHANNEL_USERNAME = os.getenv("CHANNEL_USERNAME")
+delay = 10
 
+client = TelegramClient('session_name', API_ID, API_HASH)
+client.start(PHONE_NUMBER)
 
-client = TelegramClient('session_name', api_id, api_hash)
-client.start(phone)
-
-channel = client.get_entity(channel_username)
+channel = client.get_entity(CHANNEL_USERNAME)
 
 # Charger les utilisateurs depuis users.csv
 users = []
